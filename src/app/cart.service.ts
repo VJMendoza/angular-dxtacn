@@ -3,13 +3,13 @@ import { Injectable } from '@angular/core';
 import { Product } from './products';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class CartService {
   items: Product[] = [];
-  constructor() { }
+  constructor() {}
 
-  addToCart(product: Product){
+  addToCart(product: Product) {
     this.items.push(product);
   }
 
@@ -19,6 +19,6 @@ export class CartService {
 
   clearCart() {
     this.items = [];
-    returhn this.items;
+    return this.items;
   }
 }
